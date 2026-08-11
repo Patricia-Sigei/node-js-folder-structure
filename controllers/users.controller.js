@@ -1,26 +1,18 @@
-const users = []
+const users = [];
 
 const createUser = (req, res) => {
-//   const  { name, age, email, password } = req.body
+  //   const  { name, age, email, password } = req.body
   const user = {
-    id = users.length + 1, 
-    name: req.body.name,  
-    age : req.body.age, 
-    email : req.body.email, 
-    password : req.body.password
-
+    id: users.length + 1,
+    name: req.body.name,
+    age: req.body.age,
+    email: req.body.email,
+    password: req.body.password,
   };
 
+  users.push(user);
+
+  res.status(201).json(user);
 };
 
-users.push(user)
-
-
-
-export default createUser
-
-
-
-
-
-
+export default createUser;
