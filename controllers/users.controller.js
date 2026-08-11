@@ -15,4 +15,8 @@ const createUser = (req, res) => {
   res.status(201).json(user);
 };
 
-export default createUser;
+const getUser = (req, res) => {
+  res.status(200).json(users);
+};
+
+export { createUser, getUser };
