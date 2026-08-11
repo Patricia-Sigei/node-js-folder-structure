@@ -1,8 +1,8 @@
-const users = [];
+const subjects = [];
 
-const createUser = (req, res) => {
+const createsubject = (req, res) => {
   //   const  { name, age, email, password } = req.body
-  const user = {
+  const subject = {
     id: users.length + 1,
     name: req.body.name,
     age: req.body.age,
