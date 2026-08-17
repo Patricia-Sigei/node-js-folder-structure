@@ -1,13 +1,20 @@
 const users = [];
 
 const createUser = (req, res) => {
-  //   const  { name, age, email, password } = req.body
+  const { name, age, email, password } = req.body;
+  // const user = {
+  //   id: users.length + 1,
+  //   name: req.body.name,
+  //   age: req.body.age,
+  //   email: req.body.email,
+  //   password: req.body.password,
+  // };
   const user = {
     id: users.length + 1,
-    name: req.body.name,
-    age: req.body.age,
-    email: req.body.email,
-    password: req.body.password,
+    name,
+    age,
+    email,
+    password,
   };
 
   users.push(user);
