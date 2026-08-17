@@ -29,7 +29,6 @@ VALUES ('Samiira', 20, 'samiira@gmail.com', 'Samiira@2030'),
 
 
 
-
 students    
 id   1                    2
 name  Patricia           Salma

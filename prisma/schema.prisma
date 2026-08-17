@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Student {
+id Int @id @default(autoincrement()) 
+name String 
+age Int 
+email String
+
+}
+
+model Course{
+id Int @id @default(autoincrement())
+name String 
+
+}
+
+model StudentCourse {
+studentId Int 
+courseId Int 
+grade String
+
+student  Student @relation(fields: [studentId], reference: [id])
+course   Course @relation (fields : [courseId], reference : [id])
+
+@@id([studentId, courseId])
+}
+
+
+model Product {
+id Int @id @default(autoincrement())
+name String 
+price Float
+}
+
+model Order {
+  id Int @id @default(autoincrement())
+  name String
+}
+
+model ProductOrder{
+orderId Int 
+productId Int 
+shipment String
+
+order  Order @relation(fields: [orderId], reference: [id])
+product   Product @relation (fields : [productId], reference : [id])
+
+@@id([orderId, productId])
+}

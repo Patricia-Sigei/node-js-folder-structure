@@ -3,16 +3,13 @@ const subjects = [];
 const createsubject = (req, res) => {
   //   const  { name, age, email, password } = req.body
   const subject = {
-    id: users.length + 1,
+    id: subject.length + 1,
     name: req.body.name,
-    age: req.body.age,
-    email: req.body.email,
-    password: req.body.password,
   };
 
-  users.push(user);
+  users.push(subject);
 
-  res.status(201).json(user);
+  res.status(201).json(subject);
 };
 
 const getUser = (req, res) => {
